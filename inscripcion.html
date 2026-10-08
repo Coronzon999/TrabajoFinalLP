@@ -4,8 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <div class="form-container">
+        <header class="form-header">
+            <h1>Formulario de Inscripción Curso</h1>
+            <p>Complete cuidadosamente el formulario de inscripción</p>
+        </header>
+
+        <hr class="divider">
+
+        <form action="enviar.php" method="POST" id="formInscripcion">
+            <div class="form-group">
+                <label class="section-label">Nombre del alumno</label>
+                <div class="grid grid-3">
+                    <div class="input-field">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="segundo_nombre" name="segundo_nombre" placeholder="Segundo Nombre">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group grid grid-2">
+                <div>
+                    <label for="fecha_nacimiento" class="section-label">Fecha de nacimiento</label>
+                    <div class="input-field">
+                        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                    </div>
+                </div>
+                <div>
+                    <label for="genero" class="section-label">Género</label>
+                    <div class="input-field">
+                        <select id="genero" name="genero">
+                            <option value="" disabled selected>Seleccione</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                            <option value="prefiero_no_decir">Prefiero no decir</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="section-label">Dirección</label>
+                <div class="input-field full-width">
+                    <input type="text" id="direccion_1" name="direccion_1" placeholder="Dirección de la calle">
+                </div>
+                <div class="input-field full-width margin-top">
+                    <input type="text" id="direccion_2" name="direccion_2" placeholder="Dirección de la calle Línea 2">
+                </div>
+                <div class="grid grid-2 margin-top">
+                    <div class="input-field">
+                        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="estado" name="estado" placeholder="Estado / Provincia">
+                    </div>
+                </div>
+
+                <div class="input-field full-width margin-top">
+                    <input type="text" id="codigo_postal" name="codigo_postal" placeholder="Código Postal">
+                </div>
+            </div>
+
+            <div class="form-group grid grid-2">
+                <div>
+                    <label for="email" class="section-label">Email</label>
+                    <div class="input-field">
+                        <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com">
+                    </div>
+                </div>
+                <div>
+                    <label for="telefono" class="section-label">Número de teléfono</label>
+                    <div class="input-field">
+                        <input type="tel" id="telefono" name="telefono" placeholder="(000) 000-0000">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="section-label">Ha recibido otros cursos Anteriormente</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="cursos_anteriores" value="si">
+                        <span class="radio-custom"></span>
+                        Sí
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="cursos_anteriores" value="no">
+                        <span class="radio-custom"></span>
+                        No
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group grid grid-2">
+                <div>
+                    <label for="empresa" class="section-label">Empresa</label>
+                    <div class="input-field">
+                        <input type="text" id="empresa" name="empresa" placeholder="Empresa">
+                    </div>
+                </div>
+                <div>
+                    <label for="cursos" class="section-label">Cursos</label>
+                    <div class="input-field">
+                        <select id="cursos" name="cursos">
+                            <option value="" disabled selected>Seleccione</option>
+                            <option value="curso_1">Logica y Programacion</option>
+                            <option value="curso_2">Diseño UX/UI</option>
+                            <option value="curso_3">Fundamentos para el Desarrollo WEB</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comentarios" class="section-label">Comentarios adicionales</label>
+                <div class="input-field">
+                    <textarea id="comentarios" name="comentarios" rows="5"></textarea>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="btn-container">
+                <button type="submit" class="btn-submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/app.js"></script>
+
 </body>
 </html>
